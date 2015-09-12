@@ -183,7 +183,6 @@ body.has-controller-bar {
   right: 0px;
   bottom: 0px;
   left: 0px;
-
   svg {
     position: absolute;
     top: 0px;
@@ -214,14 +213,31 @@ body.has-controller-bar {
   }
 }
 
+.road {
+  background: blue;
+  position:absolute;
+  top:100px;
+  right:0px;
+  left:0px;
+  bottom:0px;
+}
+
 .player {
   position: absolute;
   bottom: 0;
   left: 50%;
-  margin-left: -70px;
+  margin-left: -150px;
   height: 300px;
-  width: 140px;
-  background: red;
+  width: 300px;
+  z-index:1001;
   transition: all 500ms;
+  img {
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    width:100%;
+  }
 }
 
