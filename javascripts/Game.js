@@ -37,6 +37,8 @@ var Game = Backbone.View.extend({
     ]
   },
 
+  bubbleCount: 0,
+
   events: {
   },
 
@@ -441,6 +443,10 @@ var Game = Backbone.View.extend({
     }
     if (bubble) {
       this.data.push(bubble);
+      this.bubbleCount++;
+      if (this.bubbleCount >= 20) {
+        // TODO
+      }
     }
   },
 
