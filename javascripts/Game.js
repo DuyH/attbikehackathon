@@ -137,7 +137,7 @@ var Game = Backbone.View.extend({
       return;
     }
     if (evt.which === 27) {
-      evt.preventDefault();
+      //evt.preventDefault();
       if (this.started) {
         return this.stop();
       } else {

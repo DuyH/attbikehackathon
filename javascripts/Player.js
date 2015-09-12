@@ -14,16 +14,25 @@ $(function(){
     changePedal();
   }, 200);
 
+  var resetBody = function() {
+    $('.bodyImg').attr('src', 'images/neutral.png');
+  }
+
   $(document).keypress(function(e) {
     var key = String.fromCharCode(e.keyCode);
 
     if (key == '1') {
       $('.player').css('left', '25%');
-      
+      $('.bodyImg').attr('src', 'images/left.png');
+      setTimeout(resetBody, 500);
     } else if (key == '2') {
       $('.player').css('left', '50%');
-    } else {
+      $('.bodyImg').attr('src', 'images/stop.png');
+      setTimeout(resetBody, 500);
+    } else if (key == '3') {
       $('.player').css('left', '75%');
+      $('.bodyImg').attr('src', 'images/right.png');
+      setTimeout(resetBody, 500);
     }
   });
 });
