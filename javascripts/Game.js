@@ -1,3 +1,13 @@
+// SOUND EFFECTS
+var hitsfx = new Audio("/sfx/hit.wav")
+var pedalsfx = new Audio("/sfx/pedal.wav")
+pedalsfx.addEventListener('ended', function(){
+  this.currentTime = 0;
+  this.play();
+}, false);
+pedalsfx.play()
+
+
 var Game = Backbone.View.extend({
   className: 'goals-timeline',
 
@@ -179,6 +189,7 @@ var Game = Backbone.View.extend({
     if (bestBubble) {
       this.trigger('score', {score: highScore, bubble: bestBubble});
       bestBubble.beenHit = true;
+      hitsfx.play() // play sound effect
     }
   },
 
