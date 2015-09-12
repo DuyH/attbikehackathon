@@ -25,8 +25,8 @@ var Game = Backbone.View.extend({
     maxBubbleSize: 100,
     timeToShow: 6000, // 12 seconds
     interval: 1000/30,
-    minTimeBetween: 750,
-    maxTimeBetween: 1250,
+    minTimeBetween: 750, // 750 original
+    maxTimeBetween: 1250, // 1250 original
     accuracy: 250,
     accuracyOffset: 100,
     score: 2500,
