@@ -27,12 +27,15 @@ $(function(){
     }
 
     if (key == '1') {
+      console.log("ONE");
       $('.player').css('left', '25%');
       $('.bodyImg').attr('src', 'images/left.png');
     } else if (key == '2') {
+      console.log("TWO");
       $('.player').css('left', '50%');
       $('.bodyImg').attr('src', 'images/stop.png');
     } else if (key == '3') {
+      console.log("THREE");
       $('.player').css('left', '75%');
       $('.bodyImg').attr('src', 'images/right.png');
     }

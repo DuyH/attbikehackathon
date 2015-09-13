@@ -1,17 +1,11 @@
 // SOUND EFFECTS
+
 var hitsfx = new Audio("/sfx/hit.wav")
 var pedalsfx = new Audio("/sfx/pedal.wav")
 pedalsfx.addEventListener('ended', function(){
   this.currentTime = 0;
   this.play();
 }, false);
-var bgm = new Audio("/sfx/bgm.mp3")
-bgm.addEventListener('ended', function(){
-  this.currentTime = 0;
-  this.play();
-}, false);
-bgm.play()
-
 
 var Game = Backbone.View.extend({
   className: 'goals-timeline',
