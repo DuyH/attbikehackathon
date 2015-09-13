@@ -28,7 +28,8 @@ var Game = Backbone.View.extend({
         '</svg>' +
       '</div>' +
     '</div>' +
-    '<div class="paused-text-container"><div class="paused-text">PAUSED</div></div>',
+    '<div class="paused-text-container"><div class="paused-text">PAUSED</div></div>' +
+    '<div class="stop-text-container"><div class="paused-text">FINISHED</div></div>',
 
   options: {
     numMarkers: 12,
@@ -107,6 +108,7 @@ var Game = Backbone.View.extend({
       this.setDate();
       this.interval = window.setInterval(this.onInterval, this.options.interval);
       this.$el.removeClass('paused');
+      this.$el.removeClass('stopped');
     }
   },
 
@@ -117,10 +119,15 @@ var Game = Backbone.View.extend({
     });
   },
 
-  stop: function () {
+  stop: function (stopType) {
     if (this.started) {
       window.clearInterval(this.interval);
-      this.$el.addClass('paused');
+      if (stopType == 0) {
+        this.$el.addClass('paused');
+      } else {
+        this.$el.addClass('stopped');
+      }
+      
       this.started = false;
       this.stoppedTime = new Date();
     }
@@ -149,9 +156,9 @@ var Game = Backbone.View.extend({
       return;
     }
     if (evt.which === 27) {
-      //evt.preventDefault();
+      evt.preventDefault();
       if (this.started) {
-        return this.stop();
+        return this.stop(0);
       } else {
         return this.start();
       }
@@ -456,7 +463,7 @@ var Game = Backbone.View.extend({
       this.data.push(bubble);
       this.bubbleCount++;
       if (this.bubbleCount >= 20) {
-        // TODO
+        this.stop(1);
       }
     }
   },

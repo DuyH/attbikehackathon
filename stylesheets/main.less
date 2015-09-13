@@ -128,8 +128,8 @@ body.has-controller-bar {
   right: 0px;
   bottom: 0px;
   .user-select(none);
-  .paused-text-container {
-    z-index: 200;
+  .paused-text-container, .stop-text-container {
+    z-index: 5000;
     position: absolute;
     top: 0px;
     left: 0px;
@@ -146,11 +146,19 @@ body.has-controller-bar {
       margin-top: -1em;
       left: 0px;
       right: 0px;
-
     }
+  }
+  .stop-text-container {
+    background: #999;
+    top: 40px;
   }
   &.paused {
     .paused-text-container {
+      display: block;
+    }
+  }
+  &.stopped {
+    .stop-text-container {
       display: block;
     }
   }
