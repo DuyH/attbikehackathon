@@ -42,7 +42,7 @@ var Game = Backbone.View.extend({
   options: {
     numMarkers: 12,
     maxBubbleSize: 100,
-    timeToShow: 8000, // 12 seconds
+    timeToShow: 5000, // 12 seconds
     interval: 1000/30,
     minTimeBetween: 750, // 750 original
     maxTimeBetween: 1250, // 1250 original
