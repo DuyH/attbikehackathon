@@ -1,5 +1,14 @@
 // SOUND EFFECTS
 
+var bgm = new Howl({
+  urls:['/sfx/bgm.mp3'],
+  autoplay: true,
+  loop: true,
+  onstart: function(){
+    console.log("BGM started!");
+  }
+});
+
 var hitsfx = new Audio("/sfx/hit.wav")
 var pedalsfx = new Audio("/sfx/pedal.wav")
 pedalsfx.addEventListener('ended', function(){
