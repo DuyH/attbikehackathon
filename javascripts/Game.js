@@ -1,7 +1,9 @@
 // SOUND EFFECTS
+// SFX urls are from rawgit. Allows loading sounds files on static github page.
 
+// Background Music
 var bgm = new Howl({
-  urls:['/sfx/bgm.mp3'],
+  urls:['https://cdn.rawgit.com/DuyH/attbikehackathon/gh-pages/sfx/bgm.mp3'], //rawgit
   buffer: false,
   autoplay: true,
   loop: true,
@@ -14,8 +16,15 @@ var bgm = new Howl({
   }
 });
 
-var hitsfx = new Audio("/sfx/hit.wav")
-var pedalsfx = new Audio("/sfx/pedal.wav")
+// Hit sound for each 'correct' note
+var hitsfx = new Audio('https://cdn.rawgit.com/DuyH/attbikehackathon/master/sfx/hit.wav') //rawgit
+
+// Pedaling sound SFX
+var pedalsfx = new Howl({
+  urls:['https://cdn.rawgit.com/DuyH/attbikehackathon/master/sfx/pedal.wav'], //rawgit
+  autoplay: true,
+  loop: true
+});
 
 var Game = Backbone.View.extend({
   className: 'goals-timeline',
