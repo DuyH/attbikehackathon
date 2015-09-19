@@ -2,19 +2,20 @@
 
 var bgm = new Howl({
   urls:['/sfx/bgm.mp3'],
+  buffer: false,
   autoplay: true,
   loop: true,
   onstart: function(){
+    setTimeout(function(){}, 2000);
     console.log("BGM started!");
+  },
+  onloaderror: function(){
+    console.log("BGM failed to start!");
   }
 });
 
 var hitsfx = new Audio("/sfx/hit.wav")
 var pedalsfx = new Audio("/sfx/pedal.wav")
-pedalsfx.addEventListener('ended', function(){
-  this.currentTime = 0;
-  this.play();
-}, false);
 
 var Game = Backbone.View.extend({
   className: 'goals-timeline',
