@@ -4,7 +4,7 @@
 // Background Music
 var bgm = new Howl({
   urls:['https://cdn.rawgit.com/DuyH/attbikehackathon/gh-pages/sfx/bgm.mp3'], //rawgit
-  buffer: true,
+  buffer: false,
   autoplay: true,
   loop: true,
   onstart: function(){
