@@ -24,4 +24,4 @@ Accidents often occur when there is miscommunication between cyclists and motori
 [Pete Simpson]: <https://github.com/ptsimpso>
 [Cheryl Wang]: <#>
 [AT&T Mobile App Hackathon, Seattle 2015]: <http://www.eventbrite.com/e/att-mobile-app-hackathon-seattle-tickets-17925164650>
-[Play It Here]: <https://DuyH.github.io/attbikehackathon>
+[Play It Here]: <https://ddh.github.io/attbikehackathon>
